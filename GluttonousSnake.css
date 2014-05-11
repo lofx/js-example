@@ -1,0 +1,53 @@
+#panel {
+    width: 400px;
+    height: 400px;
+    border: 2px solid red;
+    margin: 20px 0px 0px 200px;
+    background:
+        -webkit-linear-gradient(top, transparent 19px, blue 20px),
+        -webkit-linear-gradient(left, transparent 19px, blue 20px);
+    background-size: 20px 20px;
+}
+.control_area {
+    width: 126px;
+    height: 96px;
+    border: 2px solid blue;
+    margin-left: 600px;
+}
+.score {
+    margin-left: 600px;
+    margin-bottom: 10px;
+}
+.button_up {
+    margin-left: 45px;
+}
+.button_down {
+    margin-left: 30px;
+}
+.button_left, .button_right {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.snake {
+    width: 18px;
+    height: 18px;
+    border: 1px solid green;
+    background: greenyellow;
+    position: relative;
+}
+
+.food {
+    width: 18px;
+    height: 19px;
+    background: red;
+    position: relative; 
+}
+.snake_new {
+/*    left: 19px;
+    top: -1px;*/
+    width: 20px;
+    height: 18px;
+    border: 1px solid green;
+    background: greenyellow;
+    position: relative;
+}
