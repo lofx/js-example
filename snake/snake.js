@@ -33,7 +33,7 @@
       create_snake();
       create_food();
       if(typeof game_loop != "undefined") clearInterval(game_loop);
-		  game_loop = setInterval(paint, 1200);
+		  game_loop = setInterval(paint, 240);
     }
 
     function create_snake() {
@@ -106,12 +106,12 @@
     // Snake eat itself.
     function collision(x, y, snake_array) {
       for (var s in snake_array) {
-        if (x == snake_array[s].x || y == snake_array[s].y) {
-          return false;
+        if (x == snake_array[s].x && y == snake_array[s].y) {
+          return true;
         }
       }
-      return true;
-    }
+			 return false;
+		}
 
     function paint_cell(x, y, type) {
       if (type == 'snake') {
