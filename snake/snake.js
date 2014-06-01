@@ -58,6 +58,7 @@
       ctx.strokeStyle = "black";
       ctx.strokeRect(0, 0, w, h);
 
+      // This is the head, init is 5,0.
       var nx = snake_array[0].x;
       var ny = snake_array[0].y;
 
@@ -84,11 +85,15 @@
       {
         // Pops out the last cell
         var tail = snake_array.pop();
+        // Make sense. array_pop out the last one,
+        // init, the direct nx ++ | nx -- or ny ++ | ny --
+        // change the head of a snake (Head: the first member put into the stack)
+        // unshift the tail to the first, make the snake x,y change,
+        // the tail always be put at the first so x,y grow... so move.
         tail.x = nx; tail.y = ny;
       }
 		  // Puts back the tail as the first cell
       // This pops and unshift make the snake move.
-      // Not quiet understand.
 		  snake_array.unshift(tail); 
 
       // Paint snake.
@@ -119,9 +124,6 @@
       }
       else if (type == 'food') {
         ctx.fillStyle = "red";
-      }
-      else if (type == 'tail') {
-        ctx.fillStyle = "green";
       }
       
       ctx.fillRect(x*cw, y*cw, cw, cw);
